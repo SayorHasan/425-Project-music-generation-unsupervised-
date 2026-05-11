@@ -1,0 +1,4 @@
+# Example validation files (representative)
+
+maestro-v3.0.0/2004/MIDI-Unprocessed_SMF_07_R1_2004_01_ORIG_MID--AUDIO_07_R1_2004_02_Track02_wav.midi
+maestro-v3.0.0/2006/MIDI-Unprocessed_12_R1_2006_01-08_ORIG_MID--AUDIO_12_R1_2006_04_Track04_wav.midi

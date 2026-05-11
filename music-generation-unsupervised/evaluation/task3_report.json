@@ -1,0 +1,219 @@
+{
+  "best_epoch": 1,
+  "best_val_loss": 3.6802889518737794,
+  "transformer_val_perplexity": 39.65785162768975,
+  "markov_baseline_val_perplexity": 46.93497355793764,
+  "train_losses": [
+    3.835705418765642
+  ],
+  "val_losses": [
+    3.6802889518737794
+  ],
+  "data_stats": {
+    "token_config": {
+      "pitch_low": 21,
+      "pitch_high": 109,
+      "num_velocities": 32,
+      "chunk_length": 512,
+      "stride": 256,
+      "min_chunk_length": 128,
+      "max_generation_length": 2048,
+      "special_tokens": [
+        "PAD",
+        "BOS",
+        "EOS",
+        "MASK"
+      ],
+      "use_velocities": true,
+      "use_rests": false,
+      "use_tempos": false,
+      "use_time_signatures": false,
+      "use_chords": false,
+      "use_programs": false,
+      "use_sustain_pedals": false,
+      "remove_duplicated_notes": true,
+      "default_note_duration": 0.5
+    },
+    "composer_to_id": {
+      "Alban Berg": 0,
+      "Alexander Scriabin": 1,
+      "Antonio Soler": 2,
+      "Carl Maria von Weber": 3,
+      "Charles Gounod / Franz Liszt": 4,
+      "Claude Debussy": 5,
+      "C\u00e9sar Franck": 6,
+      "Domenico Scarlatti": 7,
+      "Edvard Grieg": 8,
+      "Felix Mendelssohn": 9,
+      "Felix Mendelssohn / Sergei Rachmaninoff": 10,
+      "Franz Liszt": 11,
+      "Franz Liszt / Camille Saint-Sa\u00ebns": 12,
+      "Franz Liszt / Vladimir Horowitz": 13,
+      "Franz Schubert": 14,
+      "Franz Schubert / Franz Liszt": 15,
+      "Franz Schubert / Leopold Godowsky": 16,
+      "Fritz Kreisler / Sergei Rachmaninoff": 17,
+      "Fr\u00e9d\u00e9ric Chopin": 18,
+      "George Enescu": 19,
+      "George Frideric Handel": 20,
+      "Georges Bizet / Ferruccio Busoni": 21,
+      "Georges Bizet / Moritz Moszkowski": 22,
+      "Georges Bizet / Vladimir Horowitz": 23,
+      "Giuseppe Verdi / Franz Liszt": 24,
+      "Henry Purcell": 25,
+      "Isaac Alb\u00e9niz": 26,
+      "Isaac Alb\u00e9niz / Leopold Godowsky": 27,
+      "Jean-Philippe Rameau": 28,
+      "Johann Christian Fischer / Wolfgang Amadeus Mozart": 29,
+      "Johann Pachelbel": 30,
+      "Johann Sebastian Bach": 31,
+      "Johann Sebastian Bach / Egon Petri": 32,
+      "Johann Sebastian Bach / Ferruccio Busoni": 33,
+      "Johann Sebastian Bach / Franz Liszt": 34,
+      "Johann Sebastian Bach / Myra Hess": 35,
+      "Johann Strauss / Alfred Gr\u00fcnfeld": 36,
+      "Johannes Brahms": 37,
+      "Joseph Haydn": 38,
+      "Leo\u0161 Jan\u00e1\u010dek": 39,
+      "Ludwig van Beethoven": 40,
+      "Mikhail Glinka / Mily Balakirev": 41,
+      "Mily Balakirev": 42,
+      "Modest Mussorgsky": 43,
+      "Muzio Clementi": 44,
+      "Niccol\u00f2 Paganini / Franz Liszt": 45,
+      "Nikolai Medtner": 46,
+      "Nikolai Rimsky-Korsakov / Sergei Rachmaninoff": 47,
+      "Orlando Gibbons": 48,
+      "Percy Grainger": 49,
+      "Pyotr Ilyich Tchaikovsky": 50,
+      "Pyotr Ilyich Tchaikovsky / Mikhail Pletnev": 51,
+      "Pyotr Ilyich Tchaikovsky / Sergei Rachmaninoff": 52,
+      "Richard Wagner / Franz Liszt": 53,
+      "Robert Schumann": 54,
+      "Robert Schumann / Franz Liszt": 55,
+      "Sergei Rachmaninoff": 56,
+      "Sergei Rachmaninoff / Gy\u00f6rgy Cziffra": 57,
+      "Sergei Rachmaninoff / Vyacheslav Gryaznov": 58,
+      "Wolfgang Amadeus Mozart": 59
+    },
+    "pad_id": 0,
+    "bos_id": 1,
+    "eos_id": 2,
+    "vocab_size": 284
+  },
+  "hparams": {
+    "vocab_size": 284,
+    "genre_vocab_size": 60,
+    "d_model": 256,
+    "nhead": 8,
+    "num_layers": 4,
+    "dim_feedforward": 1024,
+    "dropout": 0.1,
+    "max_seq_len": 2048,
+    "pad_token_id": 0,
+    "bos_token_id": 1,
+    "eos_token_id": 2
+  },
+  "generated_files": [],
+  "generated_summary": {
+    "files": [
+      {
+        "file": "F:\\Brac\\Courses\\Cse425\\Project\\music-generation-unsupervised\\outputs\\generated_midis\\task3\\task3_sample_01.midi",
+        "note_count": 86,
+        "duration_seconds": 16.1875,
+        "repetition_ratio": 0.0,
+        "rhythm_diversity": 0.9742676081053134,
+        "note_density": 5.312741312741313,
+        "pitch_histogram_similarity": 0.9665346427854421
+      },
+      {
+        "file": "F:\\Brac\\Courses\\Cse425\\Project\\music-generation-unsupervised\\outputs\\generated_midis\\task3\\task3_sample_02.midi",
+        "note_count": 87,
+        "duration_seconds": 16.1875,
+        "repetition_ratio": 0.0,
+        "rhythm_diversity": 0.9585193784055258,
+        "note_density": 5.374517374517374,
+        "pitch_histogram_similarity": 0.7505400945980019
+      },
+      {
+        "file": "F:\\Brac\\Courses\\Cse425\\Project\\music-generation-unsupervised\\outputs\\generated_midis\\task3\\task3_sample_03.midi",
+        "note_count": 24,
+        "duration_seconds": 4.1875,
+        "repetition_ratio": 0.0,
+        "rhythm_diversity": 0.9389297560970997,
+        "note_density": 5.731343283582089,
+        "pitch_histogram_similarity": 0.7380889376172128
+      },
+      {
+        "file": "F:\\Brac\\Courses\\Cse425\\Project\\music-generation-unsupervised\\outputs\\generated_midis\\task3\\task3_sample_04.midi",
+        "note_count": 104,
+        "duration_seconds": 2.1875,
+        "repetition_ratio": 0.0,
+        "rhythm_diversity": 0.867568012881392,
+        "note_density": 47.542857142857144,
+        "pitch_histogram_similarity": 0.8426840127693978
+      },
+      {
+        "file": "F:\\Brac\\Courses\\Cse425\\Project\\music-generation-unsupervised\\outputs\\generated_midis\\task3\\task3_sample_05.midi",
+        "note_count": 90,
+        "duration_seconds": 10.1875,
+        "repetition_ratio": 0.0,
+        "rhythm_diversity": 0.9543395874250794,
+        "note_density": 8.83435582822086,
+        "pitch_histogram_similarity": 0.8060711362788727
+      },
+      {
+        "file": "F:\\Brac\\Courses\\Cse425\\Project\\music-generation-unsupervised\\outputs\\generated_midis\\task3\\task3_sample_06.midi",
+        "note_count": 85,
+        "duration_seconds": 16.0625,
+        "repetition_ratio": 0.0,
+        "rhythm_diversity": 0.979919384235479,
+        "note_density": 5.291828793774319,
+        "pitch_histogram_similarity": 0.9098324060841313
+      },
+      {
+        "file": "F:\\Brac\\Courses\\Cse425\\Project\\music-generation-unsupervised\\outputs\\generated_midis\\task3\\task3_sample_07.midi",
+        "note_count": 90,
+        "duration_seconds": 12.125,
+        "repetition_ratio": 0.0,
+        "rhythm_diversity": 0.9602462106902447,
+        "note_density": 7.422680412371134,
+        "pitch_histogram_similarity": 0.9295799328627281
+      },
+      {
+        "file": "F:\\Brac\\Courses\\Cse425\\Project\\music-generation-unsupervised\\outputs\\generated_midis\\task3\\task3_sample_08.midi",
+        "note_count": 86,
+        "duration_seconds": 12.125,
+        "repetition_ratio": 0.0,
+        "rhythm_diversity": 0.9756801247227318,
+        "note_density": 7.092783505154639,
+        "pitch_histogram_similarity": 0.8589787988600375
+      },
+      {
+        "file": "F:\\Brac\\Courses\\Cse425\\Project\\music-generation-unsupervised\\outputs\\generated_midis\\task3\\task3_sample_09.midi",
+        "note_count": 87,
+        "duration_seconds": 10.1875,
+        "repetition_ratio": 0.0,
+        "rhythm_diversity": 0.9636193098158948,
+        "note_density": 8.539877300613497,
+        "pitch_histogram_similarity": 0.9034278935008617
+      },
+      {
+        "file": "F:\\Brac\\Courses\\Cse425\\Project\\music-generation-unsupervised\\outputs\\generated_midis\\task3\\task3_sample_10.midi",
+        "note_count": 85,
+        "duration_seconds": 14.0,
+        "repetition_ratio": 0.0,
+        "rhythm_diversity": 0.9738376997885474,
+        "note_density": 6.071428571428571,
+        "pitch_histogram_similarity": 0.9208179581897078
+      }
+    ],
+    "means": {
+      "repetition_ratio": 0.0,
+      "rhythm_diversity": 0.9546927072167307,
+      "note_density": 10.721441352526094,
+      "pitch_histogram_similarity": 0.8626555813546393
+    },
+    "num_files": 10
+  }
+}

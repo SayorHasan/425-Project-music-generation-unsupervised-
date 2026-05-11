@@ -1,0 +1,181 @@
+\documentclass{article}
+
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{float}
+\usepackage{amsmath}
+
+\title{Unsupervised Neural Network for Multi-Genre Music Generation}
+
+\author{
+Fatin Anjum \\
+BRAC University \\
+\texttt{ID: 22201327}
+\and
+Md. Sayor Hasan \\
+BRAC University \\
+\texttt{ID: 22201304}
+}
+
+\begin{document}
+
+\maketitle
+
+% ---------------- ABSTRACT ----------------
+\begin{abstract}
+This project implements a complete symbolic music generation pipeline on the MAESTRO v3.0.0 dataset, covering preprocessing, model training, sample generation, and quantitative evaluation.
+
+We implement three models:
+\begin{itemize}
+    \item LSTM Autoencoder
+    \item LSTM Variational Autoencoder (VAE)
+    \item Decoder-only Transformer (REMI tokens)
+\end{itemize}
+
+Transformer outperforms baseline:
+\begin{itemize}
+    \item Transformer Perplexity: 40.19
+    \item Markov Baseline: 46.93
+\end{itemize}
+
+The work also compares the generation behavior of deterministic and probabilistic sequence models. The autoencoder focuses on reconstruction quality, the VAE adds latent-space sampling for diversity, and the Transformer models long-range musical structure through autoregressive token prediction. The report includes generated MIDI samples, loss curves, and evaluation plots so the results can be demonstrated directly to the instructor.
+\end{abstract}
+
+% ---------------- INTRO ----------------
+\section{Introduction}
+This project compares neural architectures for symbolic music generation using MAESTRO dataset focusing on reconstruction, diversity, and sequence modeling.
+
+Symbolic music generation is challenging because musical output must remain coherent over time while still sounding varied and expressive. In this project, MAESTRO piano performances are used to test whether simple sequence reconstruction models or token-based autoregressive models are more effective for learning musical structure. The goal is not only to generate new MIDI files, but also to compare how each model handles rhythm, pitch distribution, repetition, and overall musical continuity.
+
+The introduction to the work is therefore centered on a practical question: which neural approach gives the best trade-off between faithful reconstruction and believable generation? To answer that, the implementation keeps the original dataset split, evaluates different representations, and uses both visual and numerical metrics to judge the results.
+
+% ---------------- METHODOLOGY ----------------
+\section{Methodology}
+
+\begin{itemize}
+    \item Piano-roll representation for Task 1 \& 2
+    \item REMI token representation for Task 3
+    \item Preprocessing using pretty_midi and miditok
+\end{itemize}
+
+The methodology begins with the MAESTRO dataset, where MIDI files are converted into representations suitable for each task. For the first two models, each piece is transformed into 88-key binary piano-roll windows so the network can learn local note activations over fixed-length segments. For the Transformer, performances are tokenized into REMI sequences so the model can learn event order, timing, and note relationships as discrete symbols.
+
+Training is done separately for each architecture. The autoencoder learns to compress and reconstruct piano-roll windows, the VAE adds a probabilistic latent space with KL annealing, and the Transformer is trained autoregressively to predict the next token in a sequence. After training, each model is used to generate MIDI samples, and the outputs are compared with plots and summary metrics such as perplexity, rhythm diversity, repetition ratio, and pitch histogram similarity.
+
+% ---------------- RESULTS ----------------
+\section{Results and Analysis}
+
+Transformer performance:
+
+\[
+40.19 \; (\text{Transformer}), \quad 46.93 \; (\text{Markov})
+\]
+
+The results show a clear progression in generation quality across the three approaches. The autoencoder is strongest at reproducing the input window, but its outputs are often conservative and repetitive. The VAE improves diversity by sampling from a latent distribution, which makes the generated music less rigid and more varied. The Transformer performs best overall because it captures longer-range dependencies in the sequence and produces samples with better rhythmic movement and less repetition.
+
+From the evaluation plots, the Transformer also achieves the strongest balance among pitch similarity, rhythm diversity, and note density. This means it is not only better at predicting the next musical event, but also better at generating outputs that sound structurally more complete. For the demo, the plots and sample MIDI files can be used together to show both quantitative performance and qualitative improvement.
+
+In short, the analysis supports the idea that token-based autoregressive modeling is more effective than pure reconstruction for multi-genre symbolic music generation, while the VAE remains useful when diverse latent sampling is desired.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{results_loss_comparison.png}
+    \caption{Loss Comparison Across Models}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{pitch_histogram_comparison.png}
+    \caption{Pitch Distribution Comparison Across Models}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{results_metrics_comparison.png}
+    \caption{Evaluation Metrics Comparison}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{results_quality_radar.png}
+    \caption{Overall Model Quality (Radar Chart)}
+\end{figure}
+
+% ---------------- TASK 1 ----------------
+\section{Task 1: LSTM Autoencoder}
+
+\subsection{Deliverables}
+\begin{itemize}
+    \item Checkpoint: outputs/task1_autoencoder.pt
+    \item Loss curve
+    \item Generated MIDI
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{task1_loss_curve.png}
+    \caption{Task 1 Loss Curve}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{task1_pitch_histogram.png}
+    \caption{Task 1 Pitch Histogram}
+\end{figure}
+
+% ---------------- TASK 2 ----------------
+\section{Task 2: LSTM VAE}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{task2_loss_curve.png}
+    \caption{Task 2 Loss Curve}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{task2_pitch_histogram.png}
+    \caption{Task 2 Pitch Histogram}
+\end{figure}
+
+% ---------------- TASK 3 ----------------
+\section{Task 3: Transformer Generator}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{task3_loss_curve.png}
+    \caption{Task 3 Loss / Perplexity Curve}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{task3_pitch_histogram.png}
+    \caption{Task 3 Pitch Histogram}
+\end{figure}
+
+% ---------------- CONCLUSION ----------------
+\section{Conclusion}
+
+Transformer performs best, VAE improves diversity, and Autoencoder ensures reconstruction quality.
+
+Overall, this project demonstrates three different ways to model symbolic music and shows that each has a clear role. The autoencoder is useful for learning compact representations, the VAE provides diversity through latent sampling, and the Transformer gives the best generation quality and the strongest evaluation results. Together, these models show how neural methods can learn meaningful musical patterns from MAESTRO and generate new MIDI outputs for analysis and demonstration.
+
+For presentation to the teacher, the most important takeaway is that the repository now contains complete training, generation, and evaluation evidence: comparison plots, generated samples, and text explanations that connect the implementation to the results. This makes the project easier to explain, review, and defend.
+
+% ---------------- REFERENCES ----------------
+\begin{thebibliography}{9}
+
+\bibitem{maestro}
+MAESTRO Dataset, 2018.
+
+\bibitem{vae}
+Kingma & Welling, VAE.
+
+\bibitem{transformer}
+Vaswani et al., Attention Is All You Need.
+
+\end{thebibliography}
+
+\end{document}

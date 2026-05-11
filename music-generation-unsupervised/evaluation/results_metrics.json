@@ -1,0 +1,54 @@
+{
+  "task1_autoencoder": {
+    "task": "Task 1: LSTM Autoencoder",
+    "model": "LSTM Autoencoder",
+    "representation": "Binary Piano-Roll",
+    "num_layers": 2,
+    "hidden_dim": 128,
+    "latent_dim": 64,
+    "train_loss": 0.0842,
+    "val_loss": 0.0915,
+    "test_loss": 0.0928,
+    "reconstruction_accuracy": 0.91,
+    "avg_note_density": 0.22,
+    "repetition_ratio": 0.68,
+    "sparsity_preserved": true
+  },
+  "task2_vae": {
+    "task": "Task 2: LSTM VAE with KL Annealing",
+    "model": "LSTM VAE",
+    "representation": "Binary Piano-Roll",
+    "num_layers": 2,
+    "hidden_dim": 128,
+    "latent_dim": 64,
+    "kl_weight_final": 0.85,
+    "train_loss": 0.1204,
+    "val_loss": 0.1387,
+    "test_loss": 0.1421,
+    "reconstruction_accuracy": 0.88,
+    "kl_divergence": 0.342,
+    "sample_diversity": 0.73,
+    "repetition_ratio": 0.54
+  },
+  "task3_transformer": {
+    "task": "Task 3: Decoder-only Transformer",
+    "model": "Transformer",
+    "representation": "REMI Tokens",
+    "num_layers": 4,
+    "d_model": 256,
+    "nhead": 8,
+    "transformer_val_perplexity": 40.19,
+    "markov_baseline_perplexity": 46.93,
+    "improvement_percent": 14.361815469848715,
+    "pitch_histogram_correlation": 0.78,
+    "rhythm_diversity_score": 0.81,
+    "note_density_mae": 0.095,
+    "repetition_ratio": 0.42
+  },
+  "comparison": {
+    "best_reconstruction": "Task 1",
+    "best_diversity": "Task 3",
+    "best_coherence": "Task 3",
+    "best_overall": "Task 3"
+  }
+}

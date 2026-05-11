@@ -1,0 +1,8 @@
+# Install PyTorch separately from https://pytorch.org/get-started/locally/
+
+numpy
+pandas
+matplotlib
+pretty_midi
+miditok
+music21

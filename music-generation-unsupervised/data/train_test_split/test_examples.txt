@@ -1,0 +1,4 @@
+# Example test files (representative)
+
+maestro-v3.0.0/2017/MIDI-Unprocessed_083_PIANO083_MID--AUDIO-split_07-09-17_Piano-e_2_-06_wav--5.midi
+maestro-v3.0.0/2018/MIDI-Unprocessed_050_PIANO050_MID--AUDIO-split_07-06-17_Piano-e_3-01_wav--2.midi
