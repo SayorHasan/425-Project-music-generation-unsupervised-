@@ -2,7 +2,7 @@
 
 [![Python 3.13+](https://img.shields.io/badge/Python-3.13%2B-blue?logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![PyTorch 2.11+](https://img.shields.io/badge/PyTorch-2.11%2B-red?logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![MAESTRO Dataset](https://img.shields.io/badge/Dataset-MAESTRO%20v3.0.0-purple?logo=tensorflow&logoColor=white)](https://magenta.tensorflow.org/maestro)
+[![MAESTRO Dataset]([https://img.shields.io/badge/Dataset-MAESTRO%20v3.0.0-purple?logo=tensorflow&logoColor=white)](https://magenta.tensorflow.org/maestro](https://drive.google.com/drive/folders/1lE_Ey7aASxnhuc51AfVSAKRh8rJc8rp-?usp=drive_link))
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen.svg)](#contributing)
 
