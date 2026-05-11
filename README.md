@@ -610,8 +610,8 @@ If you use this project or the MAESTRO dataset, please cite:
 ## Contact
 
 **Questions or Issues?**  
-- Fatin Anjum: fatin.anjum@bracu.ac.bd (ID: 22201327)
-- Md. Sayor Hasan: sayor.hasan@bracu.ac.bd (ID: 22201304)
+- Fatin Anjum: fatin.anjum@g.bracu.ac.bd (ID: 22201327)
+- Md. Sayor Hasan: sayor.hasan@g.bracu.ac.bd (ID: 22201304)
 
 ---
 
